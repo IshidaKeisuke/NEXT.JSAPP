@@ -1,7 +1,14 @@
-function AritcleNew() {
+import Form from '../../components/articles/Form'
+import React, { useState } from 'react'
+
+const CreateAritcle = (props: Text) => {
+  // タイトルと本文に入力されている値
+  const [inputTitle, setInputTitle] = useState('')
+  const [inputBody, setInputBody] = useState('')
+
   return (
-    <h1>hoge</h1>
+    <Form inputTitle={inputTitle} inputBody={inputBody} />
   )
 }
 
-export default AritcleNew
+export default CreateAritcle
